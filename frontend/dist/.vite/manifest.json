@@ -1,0 +1,18 @@
+{
+  "_vendor-CbXHpiyO.js": {
+    "file": "assets/vendor-CbXHpiyO.js",
+    "name": "vendor"
+  },
+  "index.html": {
+    "file": "assets/index-B9N7S6lu.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_vendor-CbXHpiyO.js"
+    ],
+    "css": [
+      "assets/index-CuDuGWHG.css"
+    ]
+  }
+}
