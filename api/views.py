@@ -188,8 +188,8 @@ class ContactEmailView(APIView):
             email = EmailMultiAlternatives(
                 subject=f"⚠️ {subject}: {name}",
                 body=text_content,
-                from_email='busharatkhair@gmail.com',
-                to=['busharatkhair@gmail.com'],
+                from_email='musabsting277@gmail.com',
+                to=['musabsting277@gmail.com'],
             )
             email.attach_alternative(html_content, "text/html")
             email.send()

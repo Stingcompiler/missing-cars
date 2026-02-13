@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-white border-t border-slate-200 text-slate-600 pt-16 pb-8 mt-auto" dir="rtl">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
+
           {/* العمود 1: عن الموقع */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-slate-900">
@@ -21,12 +21,12 @@ const Footer = () => {
               منصة وطنية لتوثيق السيارات المفقودة. نلتزم بأعلى معايير الخصوصية، ولا يتم الكشف عن المواقع إلا لأصحاب الشأن بعد التحقق.
             </p>
             <div className="flex flex-wrap gap-2 pt-2">
-               <span className="flex items-center gap-1 text-[11px] font-medium bg-slate-50 text-slate-600 px-2 py-1 rounded-full border border-slate-200">
-                 <CheckCircle2 size={12} className="text-success" /> EXIF محذوف
-               </span>
-               <span className="flex items-center gap-1 text-[11px] font-medium bg-slate-50 text-slate-600 px-2 py-1 rounded-full border border-slate-200">
-                 <CheckCircle2 size={12} className="text-success" /> فحص يدوي
-               </span>
+              <span className="flex items-center gap-1 text-[11px] font-medium bg-slate-50 text-slate-600 px-2 py-1 rounded-full border border-slate-200">
+                <CheckCircle2 size={12} className="text-success" /> EXIF محذوف
+              </span>
+              <span className="flex items-center gap-1 text-[11px] font-medium bg-slate-50 text-slate-600 px-2 py-1 rounded-full border border-slate-200">
+                <CheckCircle2 size={12} className="text-success" /> فحص يدوي
+              </span>
             </div>
           </div>
 
@@ -45,13 +45,13 @@ const Footer = () => {
           <div>
             <h4 className="text-slate-900 font-bold mb-5">قنوات التواصل</h4>
             <div className="flex flex-col gap-4 text-sm">
-              <a href="#" className="flex items-center gap-3 group">
+              <a href="https://wa.me/249902929451" className="flex items-center gap-3 group">
                 <div className="bg-green-50 p-2 rounded-lg text-green-600 group-hover:bg-green-600 group-hover:text-white transition-all">
                   <MessageCircle size={18} />
                 </div>
                 <span>واتساب الإدارة</span>
               </a>
-              <a href="#" className="flex items-center gap-3 group">
+              <a href="https://t.me/ceo_programmer" className="flex items-center gap-3 group">
                 <div className="bg-blue-50 p-2 rounded-lg text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                   <Send size={18} />
                 </div>
@@ -66,7 +66,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li><Link to="/privacy" className="hover:text-primary-600 transition-colors">سياسة الخصوصية</Link></li>
               <li><Link to="/terms" className="hover:text-primary-600 transition-colors">شروط الاستخدام</Link></li>
-                {/*
+              {/*
                 
                               <li><Link to="/report" className="text-red-500 hover:font-bold transition-all">التبليغ عن مخالفة</Link></li>*/}
             </ul>
@@ -83,16 +83,16 @@ const Footer = () => {
             </span>
             <span className="hidden md:inline text-slate-200">|</span>
 
-        {/* Developer Credit Line */}
-        <div className="flex items-center gap-2 px-6 py-2 bg-gray-50 rounded-full border border-gray-100 transition-all hover:shadow-sm">
-          <span className="text-sm font-medium text-gray-500">تم تطويره </span>
-         
-          <span className="text-sm font-medium text-gray-500">بواسطة</span>
-          <div className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm">
-             <Code2 size={14} className="text-indigo-600" />
-             <span className="text-sm font-black text-gray-800 tracking-tight">MusabstingDev</span>
-          </div>
-        </div>
+            {/* Developer Credit Line */}
+            <div className="flex items-center gap-2 px-6 py-2 bg-gray-50 rounded-full border border-gray-100 transition-all hover:shadow-sm">
+              <span className="text-sm font-medium text-gray-500">تم تطويره </span>
+
+              <span className="text-sm font-medium text-gray-500">بواسطة</span>
+              <div className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm">
+                <Code2 size={14} className="text-indigo-600" />
+                <Link to="https://musabdev.pythonanywhere.com/ " target="_blank" rel="noopener noreferrer">MusabstingDev</Link>
+              </div>
+            </div>
 
           </div>
         </div>

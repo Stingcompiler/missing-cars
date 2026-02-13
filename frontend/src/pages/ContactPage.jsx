@@ -40,7 +40,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-slate-50 py-12" dir="rtl">
       <div className="container mx-auto px-4 max-w-5xl">
-        
+
         <motion.div {...fadeInUp} className="text-center mb-16">
           <h1 className="text-4xl font-bold text-slate-900 mb-4">تواصل معنا</h1>
           <p className="text-slate-500">
@@ -49,9 +49,9 @@ const ContactPage = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          
+
           {/* قسم معلومات التواصل */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
@@ -59,9 +59,9 @@ const ContactPage = () => {
           >
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
               <h3 className="text-xl font-bold text-slate-900 mb-6">بيانات الاتصال</h3>
-              
+
               <div className="space-y-6">
-                <a href="https://wa.me/249902929415" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-slate-600 hover:text-green-600 transition-colors group">
+                <a href="https://wa.me/249902929451" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-slate-600 hover:text-green-600 transition-colors group">
                   <div className="bg-green-50 p-3 rounded-xl text-green-600 group-hover:bg-green-600 group-hover:text-white transition-all">
                     <MessageCircle size={24} />
                   </div>
@@ -87,7 +87,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <span className="block text-sm font-bold text-slate-900">البريد الإلكتروني</span>
-                    <span>busharatkhair@gmail.com</span>
+                    <span>musabsting277@gmail.com</span>
                   </div>
                 </div>
 
@@ -105,14 +105,14 @@ const ContactPage = () => {
           </motion.div>
 
           {/* نموذج التواصل */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
             className="bg-white p-8 rounded-3xl shadow-lg shadow-slate-200/50"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-6">أرسل رسالة</h3>
-            
+
             {formStatus === 'success' ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-10">
                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
@@ -128,36 +128,36 @@ const ContactPage = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 {formStatus === 'error' && (
                   <div className="bg-red-50 text-red-600 p-4 rounded-xl flex items-center gap-2 text-sm font-bold border border-red-100 mb-4">
-                    <AlertCircle size={18}/> فشل الإرسال، يرجى المحاولة مرة أخرى.
+                    <AlertCircle size={18} /> فشل الإرسال، يرجى المحاولة مرة أخرى.
                   </div>
                 )}
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">الاسم الكامل</label>
-                  <input 
+                  <input
                     name="name"
-                    required 
-                    type="text" 
+                    required
+                    type="text"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 outline-none transition-all" 
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 outline-none transition-all"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">رقم الهاتف / واتساب</label>
-                  <input 
+                  <input
                     name="contact"
-                    required 
-                    type="text" 
+                    required
+                    type="text"
                     value={formData.contact}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 outline-none transition-all" 
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 outline-none transition-all"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">الموضوع</label>
-                  <select 
+                  <select
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
@@ -172,18 +172,18 @@ const ContactPage = () => {
 
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">الرسالة</label>
-                  <textarea 
+                  <textarea
                     name="message"
-                    required 
-                    rows="4" 
+                    required
+                    rows="4"
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-50 outline-none transition-all resize-none"
                   ></textarea>
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={formStatus === 'sending'}
                   className="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-slate-800 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-70"
                 >

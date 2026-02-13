@@ -205,17 +205,17 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 # الإيميل الذي سيقوم بالإرسال (يجب أن يكون صاحب كلمة مرور التطبيق)
-EMAIL_HOST_USER = 'busharatkhair@gmail.com'
+EMAIL_HOST_USER = 'musabsting277@gmail.com'
 
 # كلمة مرور التطبيق (تأكد أنها بدون مسافات تماماً)
-EMAIL_HOST_PASSWORD = 'urxjesokottkxfln '
+EMAIL_HOST_PASSWORD = 'earp tfvl hpiq ipas'
 
 # الإيميل الافتراضي الذي يظهر كمرسل (اختياري)
-DEFAULT_FROM_EMAIL = 'busharatkhair@gmail.com'
+DEFAULT_FROM_EMAIL = 'musabsting277@gmail.com'
 
 # 1. Add these lines!
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media' 
 
 # 2. Fix the minor typo in your email password (remove the extra space at the end)
-EMAIL_HOST_PASSWORD = 'urxjesokottkxfln' # Removed the trailing space
+EMAIL_HOST_PASSWORD = 'earp tfvl hpiq ipas'

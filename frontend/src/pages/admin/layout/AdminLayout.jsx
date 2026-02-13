@@ -16,13 +16,13 @@ const AdminLayout = () => {
       <div className="flex-1 lg:mr-64 flex flex-col min-h-screen">
         {/* نمرر دالة التبديل للـ Topbar ليفتح السايدبار */}
         <Topbar toggleSidebar={() => setSidebarOpen(true)} />
-        
+
         <main className="p-4 md:p-8 flex-1 pb-24 lg:pb-8">
           <Outlet />
         </main>
 
         <footer className="hidden lg:block p-6 text-center text-slate-400 text-sm">
-          &copy; 2026 مفقودات السودان - الإدارة
+          &copy; 2026  منصه ستينج للسيارات المفقودة - الإدارة
         </footer>
       </div>
 

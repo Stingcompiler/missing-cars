@@ -28,18 +28,18 @@ const Navbar = () => {
   return (
     <nav className="bg-white border-b border-slate-100 sticky top-0 z-50 shadow-sm" dir="rtl">
       <div className="container mx-auto px-4 py-3 md:py-0">
-        
+
         <div className="flex items-center justify-between h-14 md:h-20 gap-4">
           <Link to="/" className="flex items-center gap-2 flex-shrink-0">
             <div className="bg-blue-600 p-2 rounded-xl text-white shadow-sm">
               <ShieldCheck size={24} />
             </div>
             <span className="font-bold text-lg md:text-2xl text-slate-900 tracking-tight">
-             
-               
-         بشارة خير
-            
-            
+
+
+              منصه ستينج للسيارات المفقودة
+
+
             </span>
           </Link>
 
@@ -58,22 +58,22 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3 lg:hidden">
-             <Link to="/contact" className="p-2 text-slate-500">
-               <MessageCircle size={22} />
-             </Link>
-             {/* FIXED: Mobile Menu Toggle Button */}
-             <button 
-               onClick={() => setIsMobileMenuOpen(true)} 
-               className="p-2 text-slate-800 bg-slate-50 rounded-lg hover:bg-slate-100"
-             >
-               <Menu size={24} />
-             </button>
+            <Link to="/contact" className="p-2 text-slate-500">
+              <MessageCircle size={22} />
+            </Link>
+            {/* FIXED: Mobile Menu Toggle Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="p-2 text-slate-800 bg-slate-50 rounded-lg hover:bg-slate-100"
+            >
+              <Menu size={24} />
+            </button>
           </div>
         </div>
 
         <div className="pb-3 md:pb-4 lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-[400px] lg:p-0">
           <div className="relative group">
-            <input 
+            <input
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -89,12 +89,12 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
               className="fixed inset-0 z-[60] bg-slate-900/40 backdrop-blur-sm"
               onClick={() => setIsMobileMenuOpen(false)}
             />
-            <motion.div 
+            <motion.div
               initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               className="fixed right-0 top-0 h-full w-[300px] bg-white z-[70] shadow-2xl p-8 flex flex-col"
@@ -105,13 +105,13 @@ const Navbar = () => {
                   <X size={20} />
                 </button>
               </div>
-              
+
               <div className="flex flex-col gap-6">
                 {navLinks.map((link) => (
-                  <a 
-                    key={link.path} 
-                    href={link.path} 
-                    onClick={() => setIsMobileMenuOpen(false)} 
+                  <a
+                    key={link.path}
+                    href={link.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="text-slate-700 font-bold text-lg hover:text-blue-600 flex items-center justify-between"
                   >
                     {link.name}
@@ -119,7 +119,7 @@ const Navbar = () => {
                   </a>
                 ))}
                 <div className="h-px bg-slate-100 my-4"></div>
-{/*
+                {/*
 
                 <Link to="/admin/login" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-3 bg-slate-900 text-white py-4 rounded-2xl font-bold">
                   <User size={20} />
