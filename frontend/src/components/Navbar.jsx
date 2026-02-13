@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Search, Menu, X, ShieldCheck, MessageCircle, User } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import logo from '../assets/mscarslogo.png';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -31,15 +31,11 @@ const Navbar = () => {
 
         <div className="flex items-center justify-between h-14 md:h-20 gap-4">
           <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="bg-blue-600 p-2 rounded-xl text-white shadow-sm">
-              <ShieldCheck size={24} />
+            <div className="">
+              <img src={logo} alt="Logo" className="w-12 h-12" />
             </div>
             <span className="font-bold text-lg md:text-2xl text-slate-900 tracking-tight">
-
-
               منصه ستينج للسيارات المفقودة
-
-
             </span>
           </Link>
 
