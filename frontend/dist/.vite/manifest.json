@@ -1,18 +1,25 @@
 {
-  "_vendor-CbXHpiyO.js": {
-    "file": "assets/vendor-CbXHpiyO.js",
+  "_vendor-BhNz-OMc.js": {
+    "file": "assets/vendor-BhNz-OMc.js",
     "name": "vendor"
   },
   "index.html": {
-    "file": "assets/index-Bh89_RGR.js",
+    "file": "assets/index-BbfA-Gpq.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "imports": [
-      "_vendor-CbXHpiyO.js"
+      "_vendor-BhNz-OMc.js"
     ],
     "css": [
       "assets/index-BkIqG7PK.css"
+    ],
+    "assets": [
+      "assets/mscarslogo-iGOKqK5M.png"
     ]
+  },
+  "src/assets/mscarslogo.png": {
+    "file": "assets/mscarslogo-iGOKqK5M.png",
+    "src": "src/assets/mscarslogo.png"
   }
 }

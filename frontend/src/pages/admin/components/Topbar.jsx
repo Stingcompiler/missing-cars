@@ -82,7 +82,7 @@ const Topbar = ({ toggleSidebar }) => {
     if (!window.confirm("هل أنت متأكد من تسجيل الخروج؟")) return;
     setIsLoggingOut(true);
     try {
-      await axios.post('http://localhost:8000/api/logout/', {}, { withCredentials: true });
+      await ApiInstance.post('api/logout/');
       navigate('/admadminlogin');
     } catch (err) {
       console.log("Logout Error:", err);

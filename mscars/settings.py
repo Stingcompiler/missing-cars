@@ -20,13 +20,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-your-fallback-key')
 DEBUG = not PRODUCTION
 
 # PythonAnywhere domain - replace 'USERNAME' with your actual PythonAnywhere username
-PYTHONANYWHERE_USERNAME = os.environ.get('PYTHONANYWHERE_USERNAME', 'your_username')
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-if PRODUCTION:
-    ALLOWED_HOSTS.extend([
-        f'{PYTHONANYWHERE_USERNAME}.pythonanywhere.com',
-        '.pythonanywhere.com',
-    ])
+PYTHONANYWHERE_USERNAME = os.environ.get('PYTHONANYWHERE_USERNAME', 'missingcars')
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'missingcars.pythonanywhere.com', '.pythonanywhere.com']
 
 # --- APPS ---
 INSTALLED_APPS = [

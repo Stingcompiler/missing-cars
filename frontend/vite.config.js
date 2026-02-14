@@ -6,15 +6,25 @@ export default defineConfig(({ command }) => ({
   plugins: [react(), tailwindcss()],
   // This line is great for Production, keep it.
   base: command === 'build' ? '/static/' : '/',
-  
+
   // ADD THIS SECTION
   server: {
     // This tells Vite: "If you are running, use port 5173"
-    port: 5173, 
+    port: 5173,
     proxy: {
       // "If the frontend asks for /api, send it to the backend on port 8000"
       // Change '/api' to whatever prefix your backend uses (e.g., '/users', '/admin')
       '/api': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+        secure: false,
+      },
+      '/media': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+        secure: false,
+      },
+      '/car_images': {
         target: 'http://localhost:8000',
         changeOrigin: true,
         secure: false,
