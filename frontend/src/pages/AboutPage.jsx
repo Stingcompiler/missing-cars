@@ -12,20 +12,20 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-slate-50 py-16" dir="rtl">
       <div className="container mx-auto px-4 max-w-4xl">
-        
+
         {/* Hero Section */}
         <motion.div {...fadeInUp} className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 mb-6">من نحن؟</h1>
+          <h1 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-6">من نحن؟</h1>
           <p className="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            "مفقودات السودان" هي مبادرة وطنية تهدف إلى أتمتة عملية البحث عن السيارات المفقودة، 
+            "مفقودات السودان" هي مبادرة وطنية تهدف إلى أتمتة عملية البحث عن السيارات المفقودة،
             وربط أصحاب الحقوق بممتلكاتهم عبر تقنية آمنة وموثوقة.
           </p>
         </motion.div>
 
         {/* القيم والمميزات */}
         <div className="grid md:grid-cols-2 gap-6 mb-16">
-          <motion.div 
-            {...fadeInUp} 
+          <motion.div
+            {...fadeInUp}
             transition={{ delay: 0.1 }}
             className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100"
           >
@@ -38,8 +38,8 @@ const AboutPage = () => {
             </p>
           </motion.div>
 
-          <motion.div 
-            {...fadeInUp} 
+          <motion.div
+            {...fadeInUp}
             transition={{ delay: 0.2 }}
             className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100"
           >
@@ -54,8 +54,8 @@ const AboutPage = () => {
         </div>
 
         {/* الرسالة والرؤية */}
-        <motion.div 
-          {...fadeInUp} 
+        <motion.div
+          {...fadeInUp}
           transition={{ delay: 0.3 }}
           className="bg-slate-900 text-white p-10 rounded-3xl relative overflow-hidden"
         >

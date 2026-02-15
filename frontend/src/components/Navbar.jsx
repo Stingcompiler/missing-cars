@@ -27,14 +27,14 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white border-b border-slate-100 sticky top-0 z-50 shadow-sm" dir="rtl">
-      <div className="container mx-auto px-4 py-3 md:py-0">
+      <div className="container mx-auto px-4">
 
-        <div className="flex items-center justify-between h-14 md:h-20 gap-4">
-          <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="">
-              <img src={logo} alt="Logo" className="w-12 h-12" />
+        <div className="flex items-center justify-between h-16 md:h-20 gap-3">
+          <Link to="/" className="flex items-center gap-2 min-w-0 flex-shrink">
+            <div className="flex-shrink-0">
+              <img src={logo} alt="Logo" className="w-10 h-10 md:w-12 md:h-12" />
             </div>
-            <span className="font-bold text-lg md:text-2xl text-slate-900 tracking-tight">
+            <span className="font-bold text-sm sm:text-lg md:text-2xl text-slate-900 tracking-tight truncate">
               منصه ستينج للسيارات المفقودة
             </span>
           </Link>
@@ -42,7 +42,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-6">
             <div className="flex gap-6 text-[15px] font-medium text-slate-600">
               {navLinks.map((link) => (
-                <a key={link.path} href={link.path} className="hover:text-blue-600 transition-colors">
+                <a key={link.path} href={link.path} className="hover:text-blue-600 transition-colors whitespace-nowrap">
                   {link.name}
                 </a>
               ))}
@@ -53,11 +53,10 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="flex items-center gap-3 lg:hidden">
-            <Link to="/contact" className="p-2 text-slate-500">
-              <MessageCircle size={22} />
+          <div className="flex items-center gap-2 lg:hidden flex-shrink-0">
+            <Link to="/search" className="p-2 text-slate-500 hover:text-blue-600 transition-colors">
+              <Search size={22} />
             </Link>
-            {/* FIXED: Mobile Menu Toggle Button */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
               className="p-2 text-slate-800 bg-slate-50 rounded-lg hover:bg-slate-100"
@@ -67,7 +66,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="pb-3 md:pb-4 lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-[400px] lg:p-0">
+        {/* Search bar - hidden on mobile/tablet, visible only on lg+ */}
+        <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px]">
           <div className="relative group">
             <input
               type="text"
@@ -115,12 +115,10 @@ const Navbar = () => {
                   </a>
                 ))}
                 <div className="h-px bg-slate-100 my-4"></div>
-                {/*
-
-                <Link to="/admin/login" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-3 bg-slate-900 text-white py-4 rounded-2xl font-bold">
-                  <User size={20} />
-                  <span>لوحة الإدارة</span>
-                </Link>*/}
+                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-3 bg-blue-600 text-white py-4 rounded-2xl font-bold hover:bg-blue-700 transition-colors">
+                  <MessageCircle size={20} />
+                  <span>تواصل معنا</span>
+                </Link>
               </div>
             </motion.div>
           </>

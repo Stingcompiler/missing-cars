@@ -27,20 +27,20 @@ const FAQ = () => {
   return (
     <section id="faq" className="container mx-auto px-4 max-w-3xl mb-12" dir="rtl">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-slate-900 mb-4">الأسئلة الشائعة</h2>
+        <h2 className="text-xl sm:text-3xl font-bold text-slate-900 mb-4">الأسئلة الشائعة</h2>
         <p className="text-slate-500">كل ما تحتاج معرفته عن كيفية حماية سيارتك واستعادتها</p>
       </div>
 
       <div className="space-y-4">
         {faqData.map((item, i) => (
-          <details 
-            key={i} 
+          <details
+            key={i}
             className="group bg-white border border-slate-200 rounded-2xl overflow-hidden cursor-pointer transition-all hover:border-primary-200"
           >
             <summary className="flex justify-between items-center p-6 font-bold text-slate-800 list-none transition-colors group-open:bg-slate-50">
               <span className="text-lg">{item.q}</span>
               <span className="text-primary-600 transition-transform duration-300 group-open:rotate-180">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </span>
             </summary>
             <div className="p-6 pt-2 text-slate-600 leading-relaxed border-t border-slate-50 bg-slate-50/30">
@@ -49,11 +49,11 @@ const FAQ = () => {
           </details>
         ))}
       </div>
-      
+
       {/* رسالة إضافية أسفل الأسئلة */}
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl border border-blue-100 text-center">
         <p className="text-blue-800 font-medium">
-          لديك سؤال آخر؟ تواصل مع الدعم الفني مباشرة عبر 
+          لديك سؤال آخر؟ تواصل مع الدعم الفني مباشرة عبر
           <a href="#" className="underline font-bold mx-1 hover:text-blue-600">واتساب الإدارة</a>
         </p>
       </div>

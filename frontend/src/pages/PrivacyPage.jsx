@@ -12,14 +12,14 @@ const PrivacyPage = () => {
   return (
     <div className="min-h-screen bg-white py-12" dir="rtl">
       <div className="container mx-auto px-4 max-w-3xl">
-        
+
         <motion.div {...fadeInUp} className="border-b border-slate-100 pb-8 mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">سياسة الخصوصية</h1>
+          <h1 className="text-xl sm:text-3xl font-bold text-slate-900 mb-2">سياسة الخصوصية</h1>
           <p className="text-slate-500">آخر تحديث: يناير 2026</p>
         </motion.div>
 
         <div className="space-y-12">
-          
+
           <motion.section {...fadeInUp} transition={{ delay: 0.1 }}>
             <div className="flex items-center gap-2 mb-4 text-slate-900">
               <Lock className="text-primary-600" size={24} />

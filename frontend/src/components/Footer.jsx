@@ -75,22 +75,20 @@ const Footer = () => {
         </div>
 
         {/* الشريط السفلي */}
-        <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-slate-400">
+        <div className="border-t border-slate-100 pt-8 flex flex-col items-center gap-4 text-[12px] sm:text-[13px] text-slate-400">
           <p>© {new Date().getFullYear()} بشريات السودان. جميع الحقوق محفوظة.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
             <span className="flex items-center gap-1">
-              صنع  في <span className="text-red-500">🇸🇩</span> السودان
+              صنع في <span className="text-red-500">🇸🇩</span> السودان
             </span>
-            <span className="hidden md:inline text-slate-200">|</span>
+            <span className="hidden sm:inline text-slate-200">|</span>
 
             {/* Developer Credit Line */}
-            <div className="flex items-center gap-2 px-6 py-2 bg-gray-50 rounded-full border border-gray-100 transition-all hover:shadow-sm">
-              <span className="text-sm font-medium text-gray-500">تم تطويره </span>
-
-              <span className="text-sm font-medium text-gray-500">بواسطة</span>
-              <div className="flex items-center gap-1.5 bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm">
+            <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-1.5 sm:py-2 bg-gray-50 rounded-full border border-gray-100 transition-all hover:shadow-sm">
+              <span className="text-xs sm:text-sm font-medium text-gray-500">تم تطويره بواسطة</span>
+              <div className="flex items-center gap-1.5 bg-white px-2 sm:px-3 py-1 rounded-full border border-gray-200 shadow-sm">
                 <Code2 size={14} className="text-indigo-600" />
-                <Link to="https://musabdev.pythonanywhere.com/ " target="_blank" rel="noopener noreferrer">MusabstingDev</Link>
+                <Link to="https://musabdev.pythonanywhere.com/ " target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm">MusabstingDev</Link>
               </div>
             </div>
 

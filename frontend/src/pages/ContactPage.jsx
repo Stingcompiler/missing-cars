@@ -42,7 +42,7 @@ const ContactPage = () => {
       <div className="container mx-auto px-4 max-w-5xl">
 
         <motion.div {...fadeInUp} className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 mb-4">تواصل معنا</h1>
+          <h1 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-4">تواصل معنا</h1>
           <p className="text-slate-500">
             لديك استفسار؟ وجدت سيارة وتريد الإبلاغ عنها يدوياً؟ نحن هنا للمساعدة.
           </p>
